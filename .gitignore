@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+
+# Editor temp files
+*.swp
+*~
+*.tmp
+*.bak
+
+# Compiled zips (for releases or uploads)
+*.zip
+
+# Python cache (if used in tooling)
+__pycache__/
+
+# Logs or debug output
+*.log
+
+# VS Code / VSCodium project settings (optional)
+.vscode/
+
