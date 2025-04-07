@@ -130,7 +130,6 @@ script.on_nth_tick(120, function()
                         stack = {name = "hidden-radiation-source", count = 1}
                     }
                     data.radiation_source = radiation_entity
-                    game.print("DEBUG: Placing radiation entity")
                 end
             else  -- Power is sufficient
                 if not entity.active then

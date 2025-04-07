@@ -11,7 +11,8 @@
       "quality",
       "? distant-misfires",
       "? planet-muluna",
-      "? castra"
+      "? castra",
+      "! alatar-rocketry"
     ],
   "main": "control.lua"
 }

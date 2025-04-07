@@ -1,11 +1,21 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8 
-Date: 2025-04-02
+Date: 2025-04-07
+  Features:
+    - Ion Cannon mechanics improved.    
+  Balance:
+    - Ion Cannon turrent rotation speed 5x faster.  Warmup increased to 2 seconds, cooldown increased to 1.5 seconds.
   Bugfixes:
-    - 
+    - Debug messages disabled.  This is likely to happen often until v1.0.0
+  Graphics:
+    - Enhanced graphics for Promethium Thruster.
+    - Enhanced graphics for Ion Cannon.
+  Compatibility:
+    - Added incompatibility for alatar-rocketry
+  Modding:
+    - Fall of Promethea: Shattered Foundations code made public at https://codeberg.org/LunarNex/fall-of-promethea
   Known Issues:
-    - Unfinished graphics for Ion Cannon
-    - Ion Cannon functionality in beta status.  
+    - Ion Cannon projectile graphics offset from barrel.
     - Promethium BCR power does not scale with Quality
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7

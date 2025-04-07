@@ -178,31 +178,7 @@ local promethium_bullet_projectile = {
       }
     }
   }
---[[ Plasma Projector custom beam and chain
-local plasma_projector_beam = table.deepcopy(data.raw["beam"]["chain-tesla-turret-beam-start"])
-    plasma_projector_beam.name = "plasma-projector-beam"
-    -- Insert radiation damage into target_effects
-    table.insert(plasma_projector_beam.action.action_delivery.target_effects, {
-        type = "damage",
-        damage = {amount = 60, type = "radiation"}
-})
-    -- Reduce electric damage
-    for _, effect in pairs(plasma_projector_beam.action.action_delivery.target_effects) do
-        if effect.type == "damage" and effect.damage.type == "electric" then
-            effect.damage.amount = 60
-            break  -- Stops after updating the first matching chain effect
-        end
-    end
-    -- Replace __space-age__ with __fall-of-promethea__ in some of the image files
-    replace_strings_in_table(plasma_projector_beam.graphics_set.beam.start, "__space-age__", "__fall-of-promethea__")
-    replace_strings_in_table(plasma_projector_beam.graphics_set.beam.ending, "__space-age__", "__fall-of-promethea__")
 
-local plasma_projector_chain = table.deepcopy(data.raw["chain-active-trigger"]["chain-tesla-turret-chain"])
-    plasma_projector_chain.name = "plasma-projector-chain"
-    plasma_projector_chain.fork_chance = 0.5
-    plasma_projector_chain.max_range_per_jump = 27
-    plasma_projector_chain.max_jumps = 16
-]]
 -- Promethium Rocket
 local promethium_rocket_projectile = table.deepcopy(data.raw["projectile"]["explosive-rocket"])
 

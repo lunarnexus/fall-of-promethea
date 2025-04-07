@@ -76,10 +76,17 @@ local promethium_thruster = table.deepcopy(data.raw["thruster"]["thruster"])
 
     -- Apply red tint to working visualisations (Thruster Lights)
     promethium_thruster.graphics_set.working_visualisations[5].animation.filenames = {
-        "__fall-of-promethea__/graphics/entity/thruster-light-1.png",
-        "__fall-of-promethea__/graphics/entity/thruster-light-2.png"
+        "__fall-of-promethea__/graphics/entity/thruster/thruster-light-1.png",
+        "__fall-of-promethea__/graphics/entity/thruster/thruster-light-2.png"
     }
-    promethium_thruster.graphics_set.flame_effect.filename = "__fall-of-promethea__/graphics/entity/thruster-flame.png"
+    promethium_thruster.graphics_set.flame_effect.filename = "__fall-of-promethea__/graphics/entity/thruster/thruster-flame.png"
+    promethium_thruster.graphics_set.animation = util.sprite_load("__fall-of-promethea__/graphics/entity/thruster/thruster",
+        {
+        animation_speed = 0.5,
+        frame_count = 64,
+        scale = 0.5,
+        shift = {0,3}
+        })
 
 -- Hidden Power Consumer for Promethium Thruster
 local hidden_power_consumer = {
@@ -309,15 +316,15 @@ ion_cannon.icons = {
 ion_cannon.minable.result = "ion-cannon"
 ion_cannon.attack_parameters.ammo_category = "ion-cannon-ammo"  -- Uses only Ion Cannon ammo
 ion_cannon.attack_parameters.min_attack_distance = 10 -- Which one?
-ion_cannon.attack_parameters.min_range = 10  -- Which one?
-ion_cannon.attack_parameters.warmup = 60
-ion_cannon.rotation_speed = 0.001
-ion_cannon.attack_parameters.cooldown = 15  
+-- ion_cannon.attack_parameters.min_range = 10  -- Which one?
+ion_cannon.attack_parameters.warmup = 120
+ion_cannon.rotation_speed = 0.002
+ion_cannon.attack_parameters.cooldown = 90 
 ion_cannon.attack_parameters.range = 100  
 ion_cannon.inventory_size = 1
-ion_cannon.automated_ammo_count = 1
+ion_cannon.automated_ammo_count = 2
 ion_cannon.attack_parameters.projectile_center = {0,0}  -- Adjusts the vertical offset
-ion_cannon.attack_parameters.projectile_creation_distance = 1
+ion_cannon.attack_parameters.projectile_creation_distance = 0
 ion_cannon.attack_parameters.ammo_type = {
     category = "ion-cannon-ammo",
     energy_consumption = "10kJ",
@@ -338,7 +345,7 @@ ion_cannon.graphics_set.base_visualisation = {
                 width = 202,
                 height = 168,
                 frame_count = 1,
-                scale = 0.5,
+                scale = 0.55,
                 shift = {0, 0}
             }
         }
@@ -353,13 +360,13 @@ local ion_turret_head_animation = {
                 "__fall-of-promethea__/graphics/entity/ion-cannon/ion-cannon-head-3.png"
             },
             direction_count = 64,
-            height = 212,
+            height = 350,
             line_length = 1,
             lines_per_file = 22,
-            scale = 0.5,
+            scale = 0.35,
             shift = { 0,0 },
             slice = 1,
-            width = 202
+            width = 350
         }
     }
 }
