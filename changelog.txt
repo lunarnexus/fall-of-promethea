@@ -1,18 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9 
-Date: 2025-04-07
-  Features:
-    - Promethean Speed Module
-    - Promethean Quality Module
-    - Promethean Efficiency Module
-    - Zero Point Module
-    - Thruster MK2
-    - Personal Laser/Weapon
-    - Personal Battery
+Date: 2025-05-12
   Bugfixes:
-    - 
+    - fixed BCR bug, Wube changed the usage_priority allowed to a electric-energy-interface.  Used to be "solar", had to change it to "tertiary", which is not what I wanted, but what's what we've got.
   Compatibility:
-    - 
+    - Permanent incompatibility with alatar-rocketry, I'm not able to fix this one.  
   Known Issues:
     - Ion Cannon projectile graphics offset from barrel.
     - Promethium BCR power does not scale with Quality
